@@ -1,0 +1,224 @@
+*{
+	box-sizing: border-box;
+
+}
+body{
+
+	background:url("../images/topography.svg"),linear-gradient(110deg, #f93d66, #6d47d9);
+	margin: 50px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+}
+
+.container{
+	display: grid;
+	grid-gap: 20px;
+}
+
+.nav-bar ul{
+	list-style: none;
+	padding: 0px;
+	font-size: 15px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-column-gap:10px;
+}
+.nav-bar ul li{
+	background-color: #ffc600;
+	padding: 10px;
+	font-size: 1.5em;
+	font-weight: 900;
+	text-align: center;
+	cursor: pointer;
+}
+.nav-bar ul li a {
+	text-decoration: none;
+	color: black;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+	letter-spacing: 2px;
+
+}
+
+.sec-2{
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows;
+}
+
+.sec-2 .photo{
+	background-image: url("../images/taco.jpg");
+	background-size: cover;
+	background-position: bottom right;
+	min-height: 400px;
+	padding:50px;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sec-2 .photo h1,p{
+	background-color: #ffc600;
+}
+h1{
+	font-size: 2em;
+	font-weight: 900;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+	margin: 0px;
+
+}
+p{
+	font-size: 1.2em;
+	font-weight: 900;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+.sec-2 .rates{
+display: grid;
+grid-row-gap:10px;
+}
+.sec-2 .rates .rate1{
+	background-color: #ffc600;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sec-2 > .rates >.rate1>p{
+	margin: 0px;
+	font-size: 1em;
+} 
+.sec-2 .rates .rate2{
+	background-color: #ffc600;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sec-2 > .rates >.rate2>p{
+	margin: 0px;
+	font-size: 1em;
+} 
+
+.sec-3{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 20px;
+}
+.sec-3>div{
+	padding: 10px;
+	background-color: white;
+}
+.sec-3>*>p:nth-child(1)
+{
+	font-size:50px;
+}
+.sec-3>*>p{
+	margin:0px;
+	background-color: white;
+	text-align: center;
+}
+
+.sec-4{
+	display: grid;
+	grid-template-columns: 400px 1fr;
+	padding: 50px;
+	align-items:  center;
+	background-color: white;
+}
+.sec-4 .tacos-desc>p{
+	background-color: inherit;
+	font-weight: bold;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+
+}
+.sec-4 .tacos-desc >button{
+	padding: 10px 20px;
+	background-color: #ffc600;
+	border: 0px;
+}
+.sec-5{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 10px;
+}
+.sec-5>h2{
+	grid-column-start: 1;
+	grid-column-end:-1;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	grid-column-gap: 20px;
+}
+.sec-5>h2::before{
+content:' ';
+display:block;
+height: 10px;
+background:linear-gradient(90deg, transparent, #ffc600);
+align-self:  center;
+}
+.sec-5>h2::after{
+content:' ';
+display:block;
+height: 10px;
+background:linear-gradient(270deg, transparent, #ffc600);
+align-self:  center;
+}
+
+@media (max-width: 1007px){
+
+	.nav-bar ul{
+		
+		grid-template-columns: 1fr;
+		grid-row-gap:5px;	
+	
+	}
+
+}
+
+@media (max-width: 965px){
+
+	.nav-bar ul{
+		
+		grid-template-columns: 1fr;
+		grid-row-gap:5px;	
+	
+	}
+
+}
+
+@media (max-width: 725px)
+{
+	.sec-3{
+		grid-template-columns: 1fr;
+	}
+	.sec-2{
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+	}
+	.sec-2 .rates
+	{
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 10px;
+	}
+
+}
+
+@media (max-width: 590px)
+{
+
+	.sec-4{
+		grid-template-columns: 1fr;
+	}
+	.sec-5{
+		grid-template-columns: 1fr;
+		grid-row-gap:15px;
+	}
+	.sec-5 > img{
+		width: 100%;
+
+	}
+
+}
